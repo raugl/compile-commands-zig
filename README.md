@@ -1,17 +1,18 @@
 # Generate compilation commands database from `build.zig`
 
 The goal of this library is to add something akin to `CMAKE_EXPORT_COMPILE_COMMANDS` flag in cmake.
-This is so you can use an [LSP](https://microsoft.github.io/language-server-protocol/) like [clangd](https://clangd.llvm.org/) to develop your C or C++ projects that make use of
-the zig build system and toolchain, as opposed to the traditional tools in that ecosystem.
+This is so you can use an [LSP](https://microsoft.github.io/language-server-protocol/) like
+[clangd](https://clangd.llvm.org/) to develop your C or C++ projects that make use of the zig build
+system and toolchain, as opposed to the traditional tools in that ecosystem.
 
 Note that this library only supports zig >= 0.16.
 
-Note that this library is nowhere close to production ready. Its a personal utility that I improve
+Note that this library is nowhere near to production ready. Its a personal utility that I improve
 whenever I run into a limitation. If you have any improvements, PRs are highly welcomed.
 
 # Usage
 
-First you need to fetch this as a dependency
+First you need to fetch this as a dependency.
 
 ```
 zig fetch --save git+https://github.com/raugl/compile-commands-zig
@@ -39,7 +40,7 @@ b.getInstallStep().dependOn(cc_gen_step);
 ```
 
 Here is a complete example which also showcases the most common actions when setting up a build
-script for a C project
+script for a C project.
 
 ```zig
 const std = @import("std");
