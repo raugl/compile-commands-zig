@@ -15,7 +15,7 @@ whenever I run into a limitation. If you have any improvements, PRs are highly w
 First you need to fetch this as a dependency.
 
 ```
-zig fetch --save git+https://github.com/raugl/compile-commands-zig
+zig fetch --save=compile_commands git+https://github.com/raugl/compile-commands-zig
 ```
 
 Then you need to import its module in your `build.zig` and register the generation step. You need to
