@@ -23,7 +23,7 @@ supply it with a list of all the compilation targets that you want to be include
 commands database.
 
 ```zig
-const zcc = @import("src/compile_commands.zig");
+const zcc = @import("compile_commands");
 
 const cc_step = b.step("compile-commands", "Generate the compile_commands.json file");
 const cc_gen_step = zcc.createStep(b, target, &.{exe, lib1, lib2});
@@ -44,7 +44,7 @@ script for a C project.
 
 ```zig
 const std = @import("std");
-const zcc = @import("src/compile_commands.zig");
+const zcc = @import("compile_commands");
 
 pub fn build(b: *std.Build) void {
     const optimize = b.standardOptimizeOption(.{});
